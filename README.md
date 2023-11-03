@@ -1,0 +1,4 @@
+## dependence
+
+- fd
+- ripgrep
