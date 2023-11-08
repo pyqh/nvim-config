@@ -1,25 +1,10 @@
 return {
   {
-    'coffebar/neovim-project',
-    opts = {
-      projects = { -- define project roots
-        '~/Desktop/*',
-        '~/AppData/Local/nvim/',
-      },
-    },
-    init = function()
-      -- enable saving the state of plugins in the session
-      vim.opt.sessionoptions:append 'globals' -- save global variables that start with an uppercase letter and contain at least one lowercase letter.
+    "rmagatti/auto-session",
+    config = function()
+      require("auto-session").setup({
+        log_level = "error",
+      })
     end,
-    dependencies = {
-      { 'nvim-lua/plenary.nvim' },
-      { 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
-      { 'Shatur/neovim-session-manager' },
-    },
-    keys = {
-      {'<C-k><C-o>', '<cmd>Telescope neovim-project discover<CR>'},
-    },
-    lazy = false,
-    priority = 100,
   },
 }

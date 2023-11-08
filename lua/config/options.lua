@@ -1,10 +1,8 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 local opt = vim.opt
 
+-- opt.autowrite = true
 -- 行号
 opt.relativenumber = true
 opt.number = true
@@ -15,17 +13,17 @@ opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
--- 防止包裹
-opt.wrap = false
+-- 折叠
+opt.wrap = true
 
 -- 光标行
 opt.cursorline = true
 
 -- 启用鼠标
-opt.mouse:append 'a'
+opt.mouse = "a"
 
 -- 系统剪贴板
-opt.clipboard:append 'unnamedplus'
+opt.clipboard = "unnamedplus"
 
 -- 默认新窗口右和下
 opt.splitright = true
@@ -37,7 +35,7 @@ opt.smartcase = true
 
 -- 外观
 opt.termguicolors = true
-opt.signcolumn = 'yes'
+opt.signcolumn = "yes"
 
--- vim.opt.spelllang = 'en_us'
--- vim.opt.spell = true
+-- opt.spell = true
+-- opt.spelllang = "en_us"
