@@ -62,9 +62,9 @@ return {
     branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
-      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+      "3rd/image.nvim",
     },
     opts = {
       window = {
@@ -107,27 +107,17 @@ return {
       vim.keymap.set("n", "z", function()
         require("ufo").closeFoldsWith(1)
       end)
-      vim.keymap.set("n", "z2", function()
-        require("ufo").closeFoldsWith(2)
-      end)
-      vim.keymap.set("n", "z3", function()
-        require("ufo").closeFoldsWith(3)
-      end)
-      vim.keymap.set("n", "z4", function()
-        require("ufo").closeFoldsWith(4)
-      end)
+      for i = 2, 5 do
+        vim.keymap.set("n", "z" .. i, function()
+          require("ufo").closeFoldsWith(i)
+        end)
+      end
       vim.keymap.set("n", "Z", require("ufo").openAllFolds)
       require("ufo").setup({
         provider_selector = function(bufnr, filetype, buftype)
           return { "treesitter", "indent" }
         end,
       })
-    end,
-  },
-  {
-    "ggandor/leap.nvim",
-    config = function()
-      require("leap").set_default_keymaps()
     end,
   },
 }

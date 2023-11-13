@@ -30,7 +30,7 @@ map("i", "<C-w>", "<cmd>bd!<CR>")
 ------
 -- 窗口
 map("n", "<C-\\>", "<C-w>v") -- 水平新增窗口
-map("n", "<C-k><C-\\>", "<cmd>close<CR>")
+map("n", "<C-\\><C-\\>", "<cmd>close<CR>")
 
 -- 快速缩进和取消缩进
 map("n", "<TAB>", ">>")
@@ -56,8 +56,8 @@ map("i", "<C-j>", "<Down>")
 map("i", "<C-k>", "<Up>")
 map("i", "<C-l>", "<Right>")
 
-map("i", "<A-n>", "<C-Left>")
-map("i", "<A-m>", "<C-Right>")
+-- map("i", "<A-n>", "<C-Left>")
+-- map("i", "<A-m>", "<C-Right>")
 
 map("i", "<C-u>", "<Home>")
 map("i", "<C-i>", "<End>")
@@ -67,14 +67,14 @@ map("n", ".", "<C-d>")
 
 -- 单行或多行移动
 -- Move Lines
-map("n", "<A-j>", "<cmd>m .+1<cr>==")
-map("n", "<A-k>", "<cmd>m .-2<cr>==")
-map("v", "J", ":m '>+1<CR>gv=gv")
-map("v", "K", ":m '<-2<CR>gv=gv")
+map("n", "<S-j>", "<cmd>m .+1<cr>==")
+map("n", "<S-k>", "<cmd>m .-2<cr>==")
+map("v", "<S-j>", ":m '>+1<CR>gv=gv")
+map("v", "<S-k>", ":m '<-2<CR>gv=gv")
 
 -- 切换buffer
-map("n", "<S-j>", "<cmd>bnext<CR>")
-map("n", "<S-k>", "<cmd>bprevious<CR>")
+map("n", "<A-j>", "<cmd>bnext<CR>")
+map("n", "<A-k>", "<cmd>bprevious<CR>")
 
 -- 取消高亮
 map("n", "<ESC>", "<cmd>nohl<CR>")

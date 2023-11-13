@@ -1,5 +1,4 @@
 return {
-  require("extras.coding.copilot"),
   {
     "hrsh7th/nvim-cmp",
     version = false,
@@ -13,7 +12,7 @@ return {
       "onsails/lspkind-nvim",
     },
     config = function()
-      require("extras.coding.cmp")
+      require("extras.cmp")
     end,
   },
   {
