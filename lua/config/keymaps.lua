@@ -13,7 +13,7 @@ map("n", "p", "<NOP>")
 map("v", "<BS>", '"_d')
 map("v", "<C-x>", '"+x')
 map("v", "<C-c>", '"+y')
--- map("v", "<C-v>", '"+gP')
+-- map("n", "<C-v>", '"+gP')
 -- Save
 map("n", "<C-s>", "<cmd>w<CR>")
 map("i", "<C-s>", "<cmd>w<CR>")
@@ -23,6 +23,8 @@ map("i", "<C-z>", "<C-o>u")
 -- Redo
 map("n", "<C-y>", "<C-r>")
 map("i", "<C-y>", "<C-o><C-r>")
+-- select all
+map("n", "<C-a>", "gggH<C-O>G")
 -- close window
 map("n", "<C-w>", "<cmd>bd!<CR>")
 map("i", "<C-w>", "<cmd>bd!<CR>")
@@ -30,6 +32,7 @@ map("i", "<C-w>", "<cmd>bd!<CR>")
 ------
 -- 窗口
 map("n", "<C-\\>", "<C-w>v") -- 水平新增窗口
+map("n", "<leader>w", "<C-w>w")
 map("n", "<C-\\><C-\\>", "<cmd>close<CR>")
 
 -- 快速缩进和取消缩进
@@ -56,8 +59,8 @@ map("i", "<C-j>", "<Down>")
 map("i", "<C-k>", "<Up>")
 map("i", "<C-l>", "<Right>")
 
--- map("i", "<A-n>", "<C-Left>")
--- map("i", "<A-m>", "<C-Right>")
+map("n", "<Left>", "<C-Left>")
+map("n", "<Right>", "<C-Right>")
 
 map("i", "<C-u>", "<Home>")
 map("i", "<C-i>", "<End>")

@@ -40,6 +40,7 @@ return {
   {
     "RRethy/vim-illuminate", -- highlighting other uses of the word under the cursor
     config = function()
+      vim.keymap.set("n", "<C-d>", require("illuminate").goto_next_reference)
       require("illuminate").configure()
     end,
   },
@@ -67,13 +68,24 @@ return {
       "3rd/image.nvim",
     },
     opts = {
-      window = {
-        mappings = {
-          ["<Tab>"] = "toggle_node",
-          ["o"] = "open",
-          ["p"] = {
-            "toggle_preview",
-            config = { use_float = false, use_image_nvim = true },
+      filesystem = {
+        filtered_items = {
+          -- visible = true,
+          hide_dotfiles = false,
+          hide_gitignored = false,
+          hide_by_name = {
+            "node_modules",
+          },
+        },
+        follow_current_file = true,
+        window = {
+          mappings = {
+            ["<Tab>"] = "open",
+            ["<leftrelease>"] = "open",
+            ["p"] = {
+              "toggle_preview",
+              config = { use_float = false, use_image_nvim = true },
+            },
           },
         },
       },

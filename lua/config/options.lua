@@ -1,11 +1,11 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 local opt = vim.opt
-
+opt.shell = "powershell"
 -- opt.autowrite = true
 -- 行号
-opt.relativenumber = true
-opt.number = true
+-- opt.number = true
+-- opt.relativenumber = true
 
 -- 缩进
 opt.tabstop = 2
