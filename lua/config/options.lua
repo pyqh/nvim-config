@@ -1,7 +1,7 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 local opt = vim.opt
-opt.shell = "powershell"
+-- opt.shell = "powershell"
 -- opt.autowrite = true
 -- 行号
 -- opt.number = true
