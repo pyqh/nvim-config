@@ -2,10 +2,10 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 local opt = vim.opt
 -- opt.shell = "powershell"
--- opt.autowrite = true
+
 -- 行号
--- opt.number = true
--- opt.relativenumber = true
+opt.number = true
+opt.relativenumber = true
 
 -- 缩进
 opt.tabstop = 2
@@ -23,7 +23,9 @@ opt.cursorline = true
 opt.mouse = "a"
 
 -- 系统剪贴板
-opt.clipboard = "unnamedplus"
+-- opt.clipboard = "unnamedplus"
+-- opt.clipboard:append("unnamedplus")
+opt.clipboard:append { 'unnamed', 'unnamedplus' }
 
 -- 默认新窗口右和下
 opt.splitright = true

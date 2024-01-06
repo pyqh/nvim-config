@@ -3,15 +3,7 @@ return {
     "nvim-telescope/telescope.nvim",
     version = false,
     dependencies = {
-      "nvim-lua/plenary.nvim",
-      {
-        "nvim-telescope/telescope-fzf-native.nvim",
-        build = "make",
-        enabled = vim.fn.executable("make") == 1,
-        config = function()
-          require("telescope").load_extension("fzf")
-        end,
-      },
+      "nvim-lua/plenary.nvim"
     },
     config = function()
       require("telescope").setup({
@@ -77,7 +69,9 @@ return {
             "node_modules",
           },
         },
-        follow_current_file = true,
+        follow_current_file = {
+          enabled = true,
+        },
         window = {
           mappings = {
             ["<Tab>"] = "open",
