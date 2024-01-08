@@ -1,6 +1,6 @@
 -- https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
 return {
-  servers = {
+  ls = {
     "clangd",
     "cssls",
     "dockerls",
@@ -15,9 +15,8 @@ return {
     "volar",
     "vtsls",
   },
-  ensure_installed = {
-    -- "lua-language-server",
-    "clang-format", -- c
+  other = {
+    "clang-format", -- c,java,etc
     "prettierd",
     -- prettier for jsx, angular, flow, vue, typescript, css, less, scss, html, json, markdown, yaml
     "stylua", -- lua

@@ -52,18 +52,15 @@ map("i", "<C-q>", "<NOP>")
 map("i", "jj", "<ESC>")
 map("i", "jk", "<ESC>")
 -- move
-map("i", "<C-o>", "<End><CR>")
-
 map("i", "<C-h>", "<Left>")
 map("i", "<C-j>", "<Down>")
 map("i", "<C-k>", "<Up>")
 map("i", "<C-l>", "<Right>")
 
-map("n", "<Left>", "<C-Left>")
-map("n", "<Right>", "<C-Right>")
-
 map("i", "<C-u>", "<Home>")
 map("i", "<C-i>", "<End>")
+map("i", "<C-o>", "<End><CR>")
+
 -- scroll half page
 map("n", ",", "<C-u>")
 map("n", ".", "<C-d>")
@@ -76,8 +73,8 @@ map("v", "<S-j>", ":m '>+1<CR>gv=gv")
 map("v", "<S-k>", ":m '<-2<CR>gv=gv")
 
 -- 切换buffer
-map("n", "<A-j>", "<cmd>bnext<CR>")
-map("n", "<A-k>", "<cmd>bprevious<CR>")
+map("n", "<leader>j", "<cmd>bnext<CR>")
+map("n", "<leader>k", "<cmd>bprevious<CR>")
 
 -- 取消高亮
 map("n", "<ESC>", "<cmd>nohl<CR>")

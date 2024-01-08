@@ -10,13 +10,12 @@ opt.relativenumber = true
 -- 缩进
 opt.tabstop = 2
 opt.shiftwidth = 2
-opt.expandtab = true
+opt.expandtab = true -- convert tabs to spaces
 opt.autoindent = true
 
--- 折叠
 opt.wrap = true
 
--- 光标行
+-- highlight the current line
 opt.cursorline = true
 
 -- 启用鼠标
@@ -38,6 +37,9 @@ opt.smartcase = true
 -- 外观
 opt.termguicolors = true
 opt.signcolumn = "yes"
+
+opt.swapfile = false
+opt.backup = false
 
 -- opt.spell = true
 -- opt.spelllang = "en_us"

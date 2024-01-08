@@ -8,8 +8,6 @@ return {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "saadparwaiz1/cmp_luasnip",
-      "hrsh7th/cmp-cmdline",
-      "onsails/lspkind-nvim",
     },
     config = function()
       require("extras.cmp")
@@ -17,9 +15,7 @@ return {
   },
   {
     "L3MON4D3/LuaSnip",
-    build = (not jit.os:find("Windows"))
-        and "echo 'NOTE: jsregexp is optional, so not a big deal if it fails to build'; make install_jsregexp"
-      or nil,
+    build = "make install_jsregexp",
     dependencies = {
       "rafamadriz/friendly-snippets",
       config = function()
@@ -44,6 +40,5 @@ return {
       toggler = { line = "<C-_>" },
       opleader = { line = "<C-_>" },
     },
-    lazy = false,
   },
 }
